@@ -1,0 +1,13 @@
+<!-- Copyright 2014 Sony Corporation -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.zeroone_creative.basicapplication.view.widget.SimpleStreamSurfaceView
+        android:id="@+id/sony_camera_surfaceview_liveview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_light" />
+
+</merge>
