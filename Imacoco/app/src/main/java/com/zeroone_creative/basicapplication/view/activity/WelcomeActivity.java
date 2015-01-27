@@ -53,6 +53,7 @@ public class WelcomeActivity extends Activity {
         String userStr = sharedPreferences.getString(AppConfig.PREF_KEY_USER, "");
         if (!userStr.equals("")) {
             RegistActivity_.intent(mContext).start();
+            finish();
         }
     }
 

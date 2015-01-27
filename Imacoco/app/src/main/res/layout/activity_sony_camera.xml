@@ -7,7 +7,6 @@
     <com.zeroone_creative.basicapplication.view.widget.SimpleStreamSurfaceView
         android:id="@+id/sony_camera_surfaceview_liveview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/primary_light" />
+        android:layout_height="match_parent" />
 
 </merge>

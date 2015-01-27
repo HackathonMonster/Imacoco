@@ -41,11 +41,13 @@ public class RegistActivity extends Activity {
 
     @Click(R.id.regist_imagebutton_register)
     void driveStart() {
+        DeviceDiscoveryActivity_.intent(mContext).start();
         findViewById(R.id.regist_imagebutton_register).setEnabled(false);
 
         JSONRequestUtil createUserRequest = new JSONRequestUtil(new NetworkTaskCallback() {
             @Override
             public void onSuccessNetworkTask(int taskId, Object object) {
+                findViewById(R.id.regist_imagebutton_register).setEnabled(true);
                 mContext.getSharedPreferences(AppConfig.PREF_NAME, Context.MODE_PRIVATE)
                         .edit()
                         .putString(AppConfig.PREF_KEY_DRIVE, object.toString())
@@ -54,6 +56,7 @@ public class RegistActivity extends Activity {
             }
             @Override
             public void onFailedNetworkTask(int taskId, Object object) {
+                findViewById(R.id.regist_imagebutton_register).setEnabled(true);
                 Toast.makeText(mContext, getString(R.string.common_faild_network), Toast.LENGTH_SHORT).show();
             }
         },
